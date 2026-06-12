@@ -1,4 +1,4 @@
-export type TaskStatus = 'pending' | 'running' | 'success' | 'failed' | 'retry'
+export type TaskStatus = 'pending' | 'running' | 'success' | 'failed' | 'retry' | 'waiting'
 export type NodeType = 'scheduler' | 'worker'
 
 export interface Task {
@@ -13,6 +13,8 @@ export interface Task {
   maxRetries: number
   duration?: number
   logs: string[]
+  dependencies: string[]
+  dependents: string[]
 }
 
 export interface ClusterNode {

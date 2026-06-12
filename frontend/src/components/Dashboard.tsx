@@ -353,7 +353,7 @@ export default function Dashboard() {
                                 </Space>
                                 <Space wrap size={4}>
                                   {unmetDeps.map(d => (
-                                    <Tag key={d.id} color={STATUS_COLORS[d.status]} size="small">
+                                    <Tag key={d.id} color={STATUS_COLORS[d.status]} style={{ fontSize: 12, padding: '0 6px', lineHeight: '20px' }}>
                                       {d.name}: {STATUS_LABELS[d.status]}
                                     </Tag>
                                   ))}
